@@ -2,14 +2,16 @@
   "name": "@hexlet/code",
   "version": "1.0.0",
   "description": "This is second project of hexlet programming shool",
-  "main": "gendiff.js",
+  "main": "index.js",
   "scripts": {
     "test": "test"
   },
   "type" : "module",
+
   "bin": {
     "gendiff": "gendiff.js"
   },
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/koshun-code/frontend-project-46.git"
