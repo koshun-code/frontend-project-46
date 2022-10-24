@@ -1,7 +1,5 @@
 install: #make install after problem
-				npm ci
-gendiff:
-				node gendiff.js
+				npm link
 publish:
 				npm publish --dry-run
 lint:

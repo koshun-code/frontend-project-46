@@ -3,15 +3,13 @@
   "version": "1.0.0",
   "description": "This is second project of hexlet programming shool",
   "main": "index.js",
+  "bin": {
+    "gendiff": "bin/gendiff.js"
+  },
   "scripts": {
     "test": "test"
   },
-  "type" : "module",
-
-  "bin": {
-    "gendiff": "gendiff.js"
-  },
-
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/koshun-code/frontend-project-46.git"
@@ -28,6 +26,14 @@
   },
   "homepage": "https://github.com/koshun-code/frontend-project-46#readme",
   "dependencies": {
-    "commander": "^9.4.1"
+    "commander": "^9.4.1",
+    "eslint": "^8.25.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jest": "^27.1.2",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "jest": "^29.2.0"
   }
 }
