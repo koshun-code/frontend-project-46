@@ -44,8 +44,10 @@ const render = (ast) => {
   return iter(ast);
 };
 export const diff = (file1, file2) => {
-  const fileOne = JSON.parse(fs.readFileSync(getPath(file1)));
-  const fileTwo = JSON.parse(fs.readFileSync(getPath(file2)));
+  const pathOne = getPath(file1);
+  const pathTwo = getPath(file2);
+  const fileOne = JSON.parse(fs.readFileSync(pathOne));
+  const fileTwo = JSON.parse(fs.readFileSync(pathTwo));
   const tree = makeTree(fileOne, fileTwo);
   return render(tree);
 };
