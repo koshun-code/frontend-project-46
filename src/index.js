@@ -44,6 +44,7 @@ const render = (ast) => {
   return iter(ast);
 };
 export const diff = (file1, file2) => {
+  console.log(typeof file1);
   const pathOne = getPath(file1);
   const pathTwo = getPath(file2);
   const fileOne = JSON.parse(fs.readFileSync(pathOne));
