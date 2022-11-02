@@ -1,5 +1,5 @@
 import { program } from 'commander';
-import { diff } from './index.js';
+import diff from './index.js';
 
 export default () => {
   program

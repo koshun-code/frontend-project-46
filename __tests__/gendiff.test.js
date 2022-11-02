@@ -1,12 +1,10 @@
-import { fileURLToPath } from 'url';
-import path, { dirname } from 'path';
-import fs from 'node:fs';
-import { diff } from '../src/index.js';
+import { expect } from '@jest/globals';
+import fs from 'fs';
+import diff from '../src/index.js';
+import { makePath } from '../src/utils.js';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-const getFixturePath = (filename) => path.join(__dirname, '..', '__fixtures__', filename);
-const getFilePath = (filename) => path.join(__dirname, '..', filename);
-test('gendiff', () => {
-  expect(diff(fs.readFileSync(getFilePath('file1.json')), fs.readFileSync(getFilePath('file2.json')))).toEqual(getFixturePath('res.txt'));
+const getFixturePath = (filename) => makePath(['__fixtures__', filename]);
+
+test('diff', () => {
+  expect(diff('file1.json', 'file2.json')).toEqual(fs.readFileSync(getFixturePath('res.txt'), 'utf8'));
 });
