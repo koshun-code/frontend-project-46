@@ -7,3 +7,7 @@
 ### Code Climate
 [![Maintainability](https://api.codeclimate.com/v1/badges/0cc29adf8cd3ec1161fd/maintainability)](https://codeclimate.com/github/koshun-code/frontend-project-46/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/0cc29adf8cd3ec1161fd/test_coverage)](https://codeclimate.com/github/koshun-code/frontend-project-46/test_coverage)
+
+
+### Example work
+[![asciicast](https://asciinema.org/a/dK5nKuZKH3pFejz6b21VjRSf7.svg)](https://asciinema.org/a/dK5nKuZKH3pFejz6b21VjRSf7)
