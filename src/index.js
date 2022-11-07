@@ -1,6 +1,6 @@
 // import fs from 'fs';
 import _ from 'lodash';
-import { getFile } from './utils.js';
+import parse from './parsers/index.js';
 
 const makeTree = (fileOne, fileTwo) => {
   const res = (_.sortBy(_.union(_.keys(fileOne), _.keys(fileTwo)))).map((key) => {
@@ -37,8 +37,11 @@ const render = (ast) => {
   return iter(ast);
 };
 const diff = (file1, file2) => {
-  const fileOne = JSON.parse(getFile(file1));
-  const fileTwo = JSON.parse(getFile(file2));
+  // console.log(parse(file1));
+  // const fileOne = JSON.parse(getFile(file1));
+  /// const fileTwo = JSON.parse(getFile(file2));
+  const fileOne = parse(file1);
+  const fileTwo = parse(file2);
   const tree = makeTree(fileOne, fileTwo);
   return render(tree);
 };

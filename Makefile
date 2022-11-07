@@ -3,7 +3,7 @@ install: #make install after problem
 publish:
 				npm publish --dry-run
 push:
-			npm update
+			  npm update
 lint:
 				npx eslint .
 test:
