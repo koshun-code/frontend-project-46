@@ -14,3 +14,6 @@
 
 ### Stylish work
 [![asciicast](https://asciinema.org/a/bfBFweLwebsrl7yircS40zLPD.svg)](https://asciinema.org/a/bfBFweLwebsrl7yircS40zLPD)
+
+### Plain format
+[![asciicast](https://asciinema.org/a/AM9dejOo9gldc7lSpAWHODu6M.svg)](https://asciinema.org/a/AM9dejOo9gldc7lSpAWHODu6M)

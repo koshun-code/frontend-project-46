@@ -5,12 +5,12 @@ import { makePath } from '../src/utils.js';
 
 const getFixturePath = (filename) => makePath(['__fixtures__', filename]);
 
-const data = [
-  // ['/__fixtures__/file1.json', '/__fixtures__/file2.json', 'res.txt'],
-  // ['/__fixtures__/file1.yml', '/__fixtures__/file2.yml', 'res.txt'],
-  ['/__fixtures__/file11.json', '/__fixtures__/file12.json', 'res1.txt'],
-  ['/__fixtures__/file11.yml', '/__fixtures__/file12.yml', 'res1.txt'],
+const dataStylish = [
+  ['/__fixtures__/file11.json', '/__fixtures__/file12.json', 'res1.txt', 'stylish'],
+  ['/__fixtures__/file11.yml', '/__fixtures__/file12.yml', 'res1.txt', 'stylish'],
+  ['/__fixtures__/file11.json', '/__fixtures__/file12.json', 'plain.txt', 'plain'],
+  ['/__fixtures__/file11.yml', '/__fixtures__/file12.yml', 'plain.txt', 'plain'],
 ];
-test.each(data)('Compare %s with %s to be %s', (file1, file2, expected) => {
-  expect(diff(file1, file2)).toEqual(fs.readFileSync(getFixturePath(expected), 'utf8'));
+test.each(dataStylish)('Compare %s with %s to be %s', (file1, file2, expected, format) => {
+  expect(diff(file1, file2, format)).toEqual(fs.readFileSync(getFixturePath(expected), 'utf8'));
 });
