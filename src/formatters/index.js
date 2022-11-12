@@ -7,6 +7,8 @@ export default (ast, format) => {
       return stylish(ast);
     case 'plain':
       return plain(ast);
+    case 'json':
+      return JSON.stringify(ast, null, 2);
     default: return 'blank';
   }
 };
