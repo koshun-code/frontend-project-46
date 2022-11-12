@@ -11,3 +11,6 @@
 
 ### Example work
 [![asciicast](https://asciinema.org/a/dK5nKuZKH3pFejz6b21VjRSf7.svg)](https://asciinema.org/a/dK5nKuZKH3pFejz6b21VjRSf7)
+
+### Stylish work
+[![asciicast](https://asciinema.org/a/bfBFweLwebsrl7yircS40zLPD.svg)](https://asciinema.org/a/bfBFweLwebsrl7yircS40zLPD)
