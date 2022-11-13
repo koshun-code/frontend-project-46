@@ -1,8 +1,5 @@
 // import fs from 'fs';
 import _ from 'lodash';
-import parse from './parsers/index.js';
-import { getExt } from './utils.js';
-import render from './formatters/index.js';
 
 const makeTree = (fileOne, fileTwo) => {
   const res = (_.sortBy(_.union(_.keys(fileOne), _.keys(fileTwo)))).map((key) => {
@@ -30,10 +27,4 @@ const makeTree = (fileOne, fileTwo) => {
   return res;
 };
 
-const diff = (file1, file2, format = 'stylish') => {
-  const fileOne = parse(file1, getExt(file1));
-  const fileTwo = parse(file2, getExt(file2));
-  const tree = makeTree(fileOne, fileTwo);
-  return render(tree, format);
-};
-export default diff;
+export default makeTree;

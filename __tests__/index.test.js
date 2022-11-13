@@ -1,6 +1,6 @@
 import { expect } from '@jest/globals';
 import fs from 'fs';
-import diff from '../src/index.js';
+import diff from '../index.js';
 import { makePath } from '../src/utils.js';
 
 const getFixturePath = (filename) => makePath(['__fixtures__', filename]);

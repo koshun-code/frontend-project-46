@@ -1,13 +1,13 @@
-import { program } from 'commander';
-import diff from './src/index.js';
+import makeTree from './src/index.js';
+import parse from './src/parsers/index.js';
+import { getExt } from './src/utils.js';
+import render from './src/formatters/index.js';
 
-program
-  .version('1.0')
-  .description('Compares two configuration files and shows a difference.')
-  .option('-f, --format [type]', 'output format', 'stylish')
-  .arguments('<file1>, <file2>')
-  .action((file1, file2, options) => {
-    console.log(diff(file1, file2, options.format));
-  });
+const diff = (file1, file2, format = 'stylish') => {
+  const fileOne = parse(file1, getExt(file1));
+  const fileTwo = parse(file2, getExt(file2));
+  const tree = makeTree(fileOne, fileTwo);
+  return render(tree, format);
+};
 
-export default () => program.parse(process.argv);
+export default diff;
